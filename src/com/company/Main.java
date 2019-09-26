@@ -13,22 +13,20 @@ public class Main {
 
     }
 
-    public static void createObject(String className){
+    public static Printable createObject(String className){
+        Printable printable = null;
         switch (className){
-            case "Student":
-            Student s = new Student("Student","Isanova 128");
-            System.out.println("Название :" + s.getName() + "/n");
-            s.print();
+            case "Student": printable = new Student("Tan Ah Teck","1 Happy Ave");
+            printable.print();
             break;
             case "Teacher":
-                Teacher t = new Teacher("Teacher","Ahunbaeva 128");
-                System.out.println("Название : " + t.getName() + "/n");
-                t.print();
+                printable = new Teacher("Paul Tan","Ahunbaeva 128");
+                printable.print();
                 break;
             case "Administrator":
-                Administrator administrator = new Administrator("Nurgazy", "mkrn 10");
-                System.out.println("Название:" + administrator.getName() + "/n");
-                administrator.print();
+                printable = new Administrator("Nurgazy",  "'10 mkrn ");
+                printable.print();
         }
+        return  printable;
     }
 }

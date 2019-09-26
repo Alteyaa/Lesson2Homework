@@ -11,8 +11,7 @@ public class Administrator extends Person implements Printable{
 
     @Override
     public void print() {
-
-        System.out.println(mSalary + "You are salary");
+        System.out.println(getName() + "'s address is " + getAddress()   + "Salary is "  + mSalary);
 
     }
     public int getmSalary() {

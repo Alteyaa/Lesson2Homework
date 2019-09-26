@@ -22,6 +22,7 @@ public class Teacher extends Person implements Printable {
 
     @Override
     public void print() {
+        System.out.println(getName() + "'s address is " + getAddress());
         String[] courses = {"IM101", "IM102", "IM101"};
         for (String course : courses) {
             if (addCourse(course)) {

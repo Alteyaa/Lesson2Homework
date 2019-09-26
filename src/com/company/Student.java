@@ -29,9 +29,21 @@ public class Student extends Person implements Printable{
         }
         return (double)sum/numCourses;
     }
+    public void printGrades() {
+        System.out.print(this);
+        for (int i = 0; i < numCourses; ++i) {
+            System.out.print(" " + courses[i] + ":" + grades[i]);
+        }
+        System.out.println();
+    }
 
     @Override
     public void print() {
+        Student s1 = new Student("Tan Ah Teck", "1 Happy Ave");
+        s1.addCourseGrade("IM101", 97);
+        s1.addCourseGrade("IM102", 68);
+        s1.printGrades();
+        System.out.println("Average is " + s1.getAverageGrade());
         System.out.println(getName() + "'s address is " + getAddress());
     }
 }
