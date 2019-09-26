@@ -4,11 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        createObject("Student");
+        createObject("Student").print();
         System.out.println("_________________");
-        createObject("Teacher");
+        createObject("Teacher").print();
         System.out.println("_____________");
-        createObject("Administrator");
+        createObject("Administrator").print();
         System.out.println("______________");
 
     }
@@ -17,15 +17,12 @@ public class Main {
         Printable printable = null;
         switch (className){
             case "Student": printable = new Student("Tan Ah Teck","1 Happy Ave");
-            printable.print();
             break;
             case "Teacher":
                 printable = new Teacher("Paul Tan","Ahunbaeva 128");
-                printable.print();
                 break;
             case "Administrator":
                 printable = new Administrator("Nurgazy",  "'10 mkrn ");
-                printable.print();
         }
         return  printable;
     }
